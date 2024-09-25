@@ -1,0 +1,66 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the entire schedule */
+.schedule-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr; /* 4/5th for table, 1/5th for HOME */
+    width: 50%;
+    margin: 50px auto;
+}
+
+/* Title spans across both columns */
+.schedule-title {
+    grid-column: 1 / span 2;
+    background-color: yellow;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+/* Grid for the table */
+.table-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 2fr); /* 1 column for time, 4 for days */
+    grid-template-rows: auto; /* Auto-resize rows */
+    gap: 0; /* Remove gap between grid cells */
+    border: 1px solid black;
+}
+
+/* Table cells styling */
+.table-grid div {
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Styling for header cells */
+.header {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Time column styling */
+.time {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Home section styling */
+.home {
+    background-color: pink;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+}
